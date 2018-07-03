@@ -1,124 +1,88 @@
 # Cloud Foundry Go(Lang) Buildpack
-[![CF Slack](https://s3.amazonaws.com/buildpacks-assets/buildpacks-slack.svg)](http://slack.cloudfoundry.org)
+
+[![CF Slack](https://www.google.com/s2/favicons?domain=www.slack.com) Join us on Slack](https://cloudfoundry.slack.com/messages/buildpacks/)
 
 A Cloud Foundry [buildpack](http://docs.cloudfoundry.org/buildpacks/) for Go(lang) based apps.
 
-This is based on the [Heroku buildpack] (https://github.com/heroku/heroku-buildpack-go).
+### Buildpack User Documentation
 
-Additional documentation can be found at [CloudFoundry.org](http://docs.cloudfoundry.org/buildpacks/).
+Official buildpack documentation can be found at [go buildpack docs](http://docs.cloudfoundry.org/buildpacks/go/index.html).
 
-## Usage
-=======
+### Building the Buildpack
 
-This buildpack will get used if you have any files with the `.go` extension in your repository.
+To build this buildpack, run the following command from the buildpack's directory:
 
-```bash
-cf push my_app -b https://github.com/cloudfoundry/go-buildpack.git
-```
-## Disconnected environments
-To use this buildpack on Cloud Foundry, where the Cloud Foundry instance limits some or all internet activity, please read the [Disconnected Environments documentation](https://github.com/cf-buildpacks/buildpack-packager/blob/master/doc/disconnected_environments.md).
+1. Source the .envrc file in the buildpack directory.
 
-### Vendoring app dependencies
-As stated in the [Disconnected Environments documentation](https://github.com/cf-buildpacks/buildpack-packager/blob/master/doc/disconnected_environments.md), your application must 'vendor' its dependencies.
+   ```bash
+   source .envrc
+   ```
+   To simplify the process in the future, install [direnv](https://direnv.net/) which will automatically source .envrc when you change directories.
 
-For the Go buildpack, use [Godep](https://github.com/tools/godep):
+1. Install buildpack-packager
 
-```cf push``` uploads your vendored dependencies. The buildpack will compile any dependencies requiring compilation while staging your application.
-
-## Building
-
-1. Make sure you have fetched submodules
-
-  ```bash
-  git submodule update --init
-  ```
-
-1. Get latest buildpack dependencies
-
-  ```shell
-  BUNDLE_GEMFILE=cf.Gemfile bundle
-  ```
+    ```bash
+    (cd src/go/vendor/github.com/cloudfoundry/libbuildpack/packager/buildpack-packager && go install)
+    ```
 
 1. Build the buildpack
 
-  ```shell
-  BUNDLE_GEMFILE=cf.Gemfile bundle exec buildpack-packager [ --uncached | --cached ]
-  ```
+    ```bash
+    buildpack-packager build [ --cached=(true|false) ]
+    ```
 
 1. Use in Cloud Foundry
 
-    Upload the buildpack to your Cloud Foundry and optionally specify it by name
-        
+   Upload the buildpack to your Cloud Foundry and optionally specify it by name
+
     ```bash
-    cf create-buildpack custom_go_buildpack go_buildpack-cached-custom.zip 1
-    cf push my_app -b custom_go_buildpack
-    ```  
+    cf create-buildpack [BUILDPACK_NAME] [BUILDPACK_ZIP_FILE_PATH] 1
+    cf push my_app [-b BUILDPACK_NAME]
+    ```
 
-## Supported binary dependencies
+### Testing
 
-The buildpack only supports the stable patches for each dependency listed in the [manifest.yml](manifest.yml) and [releases page](https://github.com/cloudfoundry/go-buildpack/releases).
+Buildpacks use the [Cutlass](https://github.com/cloudfoundry/libbuildpack/cutlass) framework for running integration tests.
 
+To test this buildpack, run the following command from the buildpack's directory:
 
-If you try to use a binary that is not currently supported, staging your app will fail and you will see the following error message:
+1. Source the .envrc file in the buildpack directory.
 
-```
-       Could not get translated url, exited with: DEPENDENCY_MISSING_IN_MANIFEST: ...
- !
- !     exit
- !
-Staging failed: Buildpack compilation step failed
-```
+   ```bash
+   source .envrc
+   ```
+   To simplify the process in the future, install [direnv](https://direnv.net/) which will automatically source .envrc when you change directories.
 
-## Testing
-Buildpacks use the [Machete](https://github.com/cloudfoundry/machete) framework for running integration tests. 
+1. Run unit tests
 
-To test a buildpack, run the following command from the buildpack's directory:
+    ```bash
+    ./scripts/unit.sh
+    ```
 
-```
-BUNDLE_GEMFILE=cf.Gemfile bundle exec buildpack-build
-```
+1. Run integration tests
 
-More options can be found on Machete's [Github page.](https://github.com/cloudfoundry/machete) 
+    ```bash
+    ./scripts/integration.sh
+    ```
 
-## Contributing
+More information can be found on Github [cutlass](https://github.com/cloudfoundry/libbuildpack/cutlass).
+
+### Contributing
 
 Find our guidelines [here](./CONTRIBUTING.md).
 
+### Help and Support
 
-## Dependency managment
+Join the #buildpacks channel in our [Slack community](http://slack.cloudfoundry.org/) if you need any further assistance.
 
-### .godir
+### Reporting Issues
 
-If you use `.godir` your app will no longer stage.
+Please fill out the issue template fully if you'd like to start an issue for the buildpack.
 
-`.godir` has been retired in favor of using
-[godep](https://github.com/tools/godep) in your project to
-manage dependencies, and including the generated `Godep`
-directory in your git repository.
-
-### Godeps
-
-[Godeps](https://github.com/tools/godep) is the buildpack's only supported
-package manager. The buildpack will run `godep` to install your dependencies at
-staging.
-
-### C dependencies
-
-This buildpack supports building with C dependencies via
-[cgo](https://golang.org/cmd/cgo/). You can set config vars to specify CGO flags
-to, e.g., specify paths for vendored dependencies. E.g., to build
-[gopgsqldriver](https://github.com/jbarham/gopgsqldriver), add the config var
-`CGO_CFLAGS` with the value `-I/app/code/vendor/include/postgresql` and include
-the relevant Postgres header files in `vendor/include/postgresql/` in your app.
-
-## Help and Support
-
-Join the #buildpacks channel in our [Slack community] (http://slack.cloudfoundry.org/) 
-
-## Reporting Issues
-
-Open an issue on this project
-
-## Active Development
+### Active Development
 
 The project backlog is on [Pivotal Tracker](https://www.pivotaltracker.com/projects/1042066)
+
+### Acknowledgements
+
+Inspired by the [Heroku buildpack](https://github.com/heroku/heroku-buildpack-go).

@@ -1,4 +1,6 @@
-[submodule "compile-extensions"]
-	path = compile-extensions
-	url = https://github.com/cloudfoundry/compile-extensions.git
-  branch = master
+[submodule "fixtures/with_dependencies/src/with_dependencies/vendor/github.com/ZiCog/shiny-thing"]
+	path = fixtures/with_dependencies/src/with_dependencies/vendor/github.com/ZiCog/shiny-thing
+	url = https://github.com/ZiCog/shiny-thing
+[submodule "fixtures/go16_dependencies/Godeps/_workspace/src/github.com/ZiCog/shiny-thing"]
+	path = fixtures/go16_dependencies/Godeps/_workspace/src/github.com/ZiCog/shiny-thing
+	url = https://github.com/ZiCog/shiny-thing

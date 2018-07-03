@@ -1,3 +1,461 @@
+v1.8.25 Jun 25, 2018
+=====================
+
+* Merge pull request #63 from Appdynamics/master
+  (https://www.pivotaltracker.com/story/show/157826834)
+
+* Add glide 0.13.1
+  (https://www.pivotaltracker.com/story/show/158474707)
+
+* Add godep 80
+  (https://www.pivotaltracker.com/story/show/158428171)
+
+* Add dep 0.4.1
+  (https://www.pivotaltracker.com/story/show/158469869)
+
+v1.8.24 Jun 19, 2018
+=====================
+
+* Add go 1.10.3, remove go 1.10.1
+  (https://www.pivotaltracker.com/story/show/158268950)
+
+* Add go 1.9.7, remove go 1.9.5
+  (https://www.pivotaltracker.com/story/show/158268966)
+
+v1.8.23 Jun 04, 2018
+=====================
+
+* Support packaging with associated stacks
+  (https://www.pivotaltracker.com/story/show/153256959)
+
+v1.8.22 May 08, 2018
+=====================
+
+* Add go 1.9.6, remove go 1.9.4
+  (https://www.pivotaltracker.com/story/show/157260760)
+
+* Add go 1.10.2, remove go 1.10
+  (https://www.pivotaltracker.com/story/show/157256879)
+
+v1.8.21 Apr 09, 2018
+=====================
+
+* Add go 1.9.5, remove go 1.9.3
+  (https://www.pivotaltracker.com/story/show/156622355)
+
+* Add go 1.10.1
+  (https://www.pivotaltracker.com/story/show/156377959)
+
+* Verify Buildpacks should be compatible with cf CLI versions that push symlinks
+  (https://www.pivotaltracker.com/story/show/155955184)
+
+v1.8.20 Mar 09, 2018
+=====================
+
+* Use manifest cache downloads
+  (https://www.pivotaltracker.com/story/show/155405429)
+
+* Document new buildpack-packager build command
+  (https://www.pivotaltracker.com/story/show/155223266)
+
+v1.8.19 Feb 20, 2018
+=====================
+
+* Add go 1.10
+  (https://www.pivotaltracker.com/story/show/155326828)
+
+v1.8.18 Feb 08, 2018
+=====================
+
+* Add go 1.8.7, 1.9.4. Remove 1.8.5, 1.9.2
+  (https://www.pivotaltracker.com/story/show/155013831)
+
+* Enable manifest override yml
+  (https://www.pivotaltracker.com/story/show/153614649)
+
+v1.8.17 Jan 29, 2018
+=====================
+
+* Add godep v80, remove godep v79
+  (https://www.pivotaltracker.com/story/show/154691830)
+
+* Add dep v0.4.1, remove dep v0.3.2
+  (https://www.pivotaltracker.com/story/show/154619283)
+
+v1.8.16 Jan 23, 2018
+=====================
+
+* Add go 1.8.6, Remove 1.8.4
+  (https://www.pivotaltracker.com/story/show/154548286)
+
+* Add go 1.9.3, Remove 1.9.1
+  (https://www.pivotaltracker.com/story/show/154539512)
+
+v1.8.15 Dec 07, 2017
+=====================
+
+* Start Command uses relative path
+  (https://www.pivotaltracker.com/story/show/153348742)
+
+v1.8.14 Nov 21, 2017
+=====================
+
+* Add glide v0.13.1, remove glide v0.13.0
+  (https://www.pivotaltracker.com/story/show/152655941)
+
+v1.8.13 Oct 31, 2017
+=====================
+
+* Add go 1.9.2, 1.8.5, Remove 1.9.0, 1.8.3
+  (https://www.pivotaltracker.com/story/show/152293707)
+  (https://www.pivotaltracker.com/story/show/152296342)
+
+* Verify dependency downloads using sha256 instead of md5
+  (https://www.pivotaltracker.com/story/show/151913767)
+  (https://github.com/cloudfoundry/buildpack-packager/issues/17)
+
+* Store profile.d dir outside app directory on recent BAL
+  (https://www.pivotaltracker.com/story/show/151381713)
+
+v1.8.12 Oct 23, 2017
+=====================
+
+* Add dep v0.3.2, remove dep v0.3.1
+  (https://www.pivotaltracker.com/story/show/152105703)
+
+v1.8.11 Oct 06, 2017
+=====================
+
+* Add go 1.9.1, 1.8.4, Remove 1.8.1
+  (https://www.pivotaltracker.com/story/show/151696804)
+
+v1.8.10 Oct 03, 2017
+=====================
+
+* Add glide v0.13.0, remove glide v0.12.3
+  (https://www.pivotaltracker.com/story/show/151551564)
+
+v1.8.9 Sep 27, 2017
+====================
+
+* Adds support for dep dependency management tool
+  (https://www.pivotaltracker.com/story/show/149822182)
+
+* Add dep v0.3.1
+  (https://www.pivotaltracker.com/story/show/151201956)
+
+v1.8.8 Sep 05, 2017
+====================
+
+* Improve comparison of Go package manager versions
+  (https://www.pivotaltracker.com/story/show/149863408)
+
+v1.8.7 Aug 28, 2017
+====================
+
+* Add go1.9
+  (https://www.pivotaltracker.com/story/show/150535442)
+
+v1.8.6 Jul 31, 2017
+====================
+
+* Amend license
+  (https://www.pivotaltracker.com/story/show/147439591)
+
+* Fix readme links
+  (https://www.pivotaltracker.com/story/show/147615323)
+
+* Change go default version to floating wildcard (e.g. 1.x)
+  (https://www.pivotaltracker.com/story/show/146106141)
+
+v1.8.5 Jun 06, 2017
+====================
+
+* Convert to online-only distribution.
+  - See: http://cf-dev.70369.x6.nabble.com/cf-dev-Discontinuing-Distribution-of-the-Offline-Buildpacks-td6732.html
+  (https://www.pivotaltracker.com/story/show/146375487)
+
+v1.8.4 May 26, 2017
+====================
+
+* Add go1.8.3, remove go1.8.2
+  (https://www.pivotaltracker.com/story/show/146088521)
+  (https://www.pivotaltracker.com/story/show/145956653)
+
+* Add go1.8.2 and go1.7.6, remove go1.8.0 and go1.7.4
+  (https://www.pivotaltracker.com/story/show/145956653)
+
+* Update buildpack to define its own interfaces
+  (https://www.pivotaltracker.com/story/show/145065635)
+
+
+v1.8.3 May 18, 2017
+====================
+
+* Change default go version from 1.7.5 to 1.8.1
+  (https://www.pivotaltracker.com/story/show/143721781)
+
+* Add link to EOL warning for Go
+  (https://www.pivotaltracker.com/story/show/144943201)
+
+* Ensure .profile.d scripts and hooks are compatible
+  (https://www.pivotaltracker.com/story/show/145118801)
+
+v1.8.2 May 08, 2017
+====================
+
+* Fix bug when GO_INSTALL_TOOLS_IN_IMAGE and GO_SETUP_GOPATH_IN_IMAGE are both set
+  (https://www.pivotaltracker.com/story/show/143659615)
+
+* Add Multi buildpack support
+  (https://www.pivotaltracker.com/story/show/142852047)
+
+v1.8.1 Apr 12, 2017
+====================
+
+* Do not error if cache dir does not exist
+  (https://www.pivotaltracker.com/story/show/143527395)
+
+* Add go 1.8.1
+  (https://www.pivotaltracker.com/story/show/143333553)
+
+* Precompile uncached buildpack
+  Previously only the cached buildpack compiled
+  (https://www.pivotaltracker.com/story/show/143040749)
+
+
+v1.8.0 Apr 04, 2017
+=====================
+
+* Don't pass verbose flag to 'go install'
+  (https://www.pivotaltracker.com/story/show/142723241)
+
+* Implement buildpack in Go
+  (https://www.pivotaltracker.com/story/show/142083735)
+
+* Add support for supply buildpacks
+  (https://www.pivotaltracker.com/story/show/141616657)
+
+v1.7.19 Feb 24, 2017
+=====================
+
+* Add go1.8.0
+  (https://www.pivotaltracker.com/story/show/140085065)
+
+* Remove go 1.5 support
+  (https://www.pivotaltracker.com/story/show/137306167)
+
+* Add godep v79, remove godep v78
+  (https://www.pivotaltracker.com/story/show/138883943)
+
+* Add EOL dates for go
+  (https://www.pivotaltracker.com/story/show/137374307)
+
+v1.7.18 Jan 30, 2017
+=====================
+
+* Add go1.7.5, remove go1.7.3
+  - make go1.7.5 the default version
+  (https://www.pivotaltracker.com/story/show/138452757)
+
+* Add godep v78, remove godep v76
+  (https://www.pivotaltracker.com/story/show/137992733)
+  (https://www.pivotaltracker.com/story/show/137618325)
+
+v1.7.17 Jan 10, 2017
+=====================
+
+* Add warning if downloaded dependency is not the latest patch version for a
+given major and minor version
+  (https://www.pivotaltracker.com/story/show/134863437)
+
+* Add warning if buildpack version used to stage an app changes
+  (https://www.pivotaltracker.com/story/show/135234395)
+
+* Add godep v76, remove godep v75
+  (https://www.pivotaltracker.com/story/show/137372669)
+
+v1.7.16 Dec 05, 2016
+=====================
+
+* Add go 1.6.4, remove go 1.6.2
+  (https://www.pivotaltracker.com/story/show/135369803)
+
+* Add go 1.7.4, remove go 1.7.1
+  (https://www.pivotaltracker.com/story/show/135369803)
+
+* Change default go version from 1.6.3 to 1.7.4
+  (https://www.pivotaltracker.com/story/show/132678773)
+  (https://www.pivotaltracker.com/story/show/135369803)
+
+* Rebuild and change path for go, godep, and glide binaries
+  - We identified a potential, but unlikely, attack vector in our continuous
+    integration system. Our own auditing strongly suggests that this attack
+    vector was not taken advantage of. However, out of an abundance of caution,
+    we are rebuilding all buildpack dependencies that we maintain.
+
+v1.7.15 Nov 09, 2016
+=====================
+
+* Ensure all downloaded binaries have checksums verified
+  (https://www.pivotaltracker.com/story/show/128099189)
+
+* Add godep v75, remove godep v74
+  (https://www.pivotaltracker.com/story/show/133766813)
+
+v1.7.14 Oct 19, 2016
+=====================
+
+* go-buildpack BOSH release now available on bosh.io at
+  http://bosh.io/releases/github.com/cloudfoundry/go-buildpack-release
+  (https://www.pivotaltracker.com/story/show/130040305)
+
+* Add go 1.7.3, remove go 1.7
+  - go 1.7.2 is a faulty release and should not be used:
+    https://github.com/golang/go/blob/release-branch.go1.7/doc/devel/release.html#L52-L56
+  (https://www.pivotaltracker.com/story/show/132626707)
+  (https://www.pivotaltracker.com/story/show/132774043)
+
+* Add glide v0.12.3, remove glide v0.11.1
+  (https://www.pivotaltracker.com/story/show/129540793)
+
+* Do not glide install if vendor with subdirs present
+  (https://www.pivotaltracker.com/story/show/129540793)
+
+* Use `godep go install` if a go1.6 app has a Godeps/Godeps.json and a
+  Godeps/_workspace directory
+  (https://www.pivotaltracker.com/story/show/131074273)
+
+* Copy Go toolchain into container if GO_INSTALL_TOOLS_IN_IMAGE is set
+  (https://www.pivotaltracker.com/story/show/131074273)
+
+* Set $GOPATH in the runtime container if GO_SETUP_GO_PATH_IN_IMAGE is set
+  (https://www.pivotaltracker.com/story/show/131074273)
+
+v1.7.13 Sep 19, 2016
+=====================
+
+* Add go 1.7.1
+  (https://www.pivotaltracker.com/story/show/129969725)
+
+* Remove reference to Heroku docs in staging output
+  (https://www.pivotaltracker.com/story/show/127931269)
+
+v1.7.12 Sep 01, 2016
+=====================
+
+* Add go 1.7
+  (https://www.pivotaltracker.com/story/show/128376229)
+
+* Respect GO_INSTALL_PACKAGE_SPEC environment variable for native vendoring
+  (https://www.pivotaltracker.com/story/show/128292483)
+
+* Filter credentials from dependency urls printed during staging
+  (https://www.pivotaltracker.com/story/show/127362787)
+
+* Use go binaries built from source by Cloud Foundry
+  (https://www.pivotaltracker.com/story/show/127362389)
+
+v1.7.11 Jul 27, 2016
+=====================
+
+* Add glide v0.11.1, remove glide v0.11.0
+  (https://www.pivotaltracker.com/story/show/126786257)
+
+* Add default_versions support to Go buildpack
+  - Add default_versions section to manifest.yml
+  - Modify bin/compile to use default_version_for script
+  (https://www.pivotaltracker.com/story/show/126420801)
+
+v1.7.10 Jul 19, 2016
+=====================
+
+* Add go 1.6.3, remove go 1.6.1
+  - go 1.6.3 fixes CVE-2016-5386
+  (https://www.pivotaltracker.com/story/show/126516829)
+  (https://www.pivotaltracker.com/story/show/126592107)
+
+* Make buildpacks.cloudfoundry.org the default url for buildpack dependencies
+  (https://www.pivotaltracker.com/story/show/121757949)
+
+v1.7.9 Jul 08, 2016
+====================
+
+* Add glide package manager support and add glide v0.11.0
+  (https://www.pivotaltracker.com/story/show/121673251)
+  (https://www.pivotaltracker.com/story/show/124886541)
+
+* Remove upstream vendored virtualenv, mercurial, bzr, concurrency.sh
+  artifacts
+  (https://www.pivotaltracker.com/story/show/122197731)
+
+* Update godep to v74
+  artifacts
+  (https://www.pivotaltracker.com/story/show/120737515)
+
+v1.7.8 May 10, 2016
+====================
+
+* Update Godep to v65
+  (https://www.pivotaltracker.com/story/show/119235111)
+
+* Remove fail case for govendor
+  the bin/compile script now does not fail if it detects govendor,
+  because govendor should comply with native go vendoring in
+  (https://www.pivotaltracker.com/story/show/119184383)
+
+* Allow go native vendoring to skip `vendor/` directory
+  Detect now has an "extra" option to allow an app with `.go` files and
+  $GOPACKAGENAME even if it is missing a vendor directory
+  (https://www.pivotaltracker.com/story/show/118519961)
+
+
+v1.7.7 Apr 26, 2016
+====================
+
+* Remove go1.4
+  (https://www.pivotaltracker.com/story/show/117556513)
+
+v1.7.6 Apr 22, 2016
+====================
+
+* Allow deploying of go apps without a Procfile
+  (https://www.pivotaltracker.com/story/show/117929711)
+
+* Add go 1.6.2, remove go 1.6
+  (https://www.pivotaltracker.com/story/show/117966791)
+
+* Allow native go vendoring
+  (https://www.pivotaltracker.com/story/show/117638407)
+
+commit e7a51484243a979d2534d1b27d63d8a7ede80581
+Author: David Jahn <david.a.jahn@gmail.com>
+Date:   Tue Apr 19 12:07:34 2016 -0400
+
+* Print a warning when the app uses go1.6 with vendor experiment and doesn't have a vendor dir
+  (https://www.pivotaltracker.com/story/show/117840949)
+
+* Fix bug where apps using go1.6 and ldflags could not stage
+  (https://www.pivotaltracker.com/story/show/117841169)
+
+v1.7.5 Apr 13, 2016
+====================
+
+* Add godep v62, remove godep v61
+  (https://www.pivotaltracker.com/story/show/117258211)
+
+* Add go 1.5.4, go 1.6.1, remove go 1.5.2
+  (https://www.pivotaltracker.com/story/show/117405095)
+
+v1.7.4 Apr 11, 2016
+====================
+
+* Bump Godep version to 0.61
+  (https://www.pivotaltracker.com/story/show/117078185)
+
+* Uses buildmode=pie for go 1.6+
+  (https://www.pivotaltracker.com/story/show/113966315)
+
 v1.7.3 Feb 29, 2016
 ====================
 
